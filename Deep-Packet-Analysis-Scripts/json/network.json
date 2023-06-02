@@ -1,0 +1,132 @@
+{
+    "network" : {
+    "template" : "network_*",
+    "settings" : {
+      "index": {
+         "refresh_interval" :  "30s",
+         "cache.filter.expire" : "2m",
+         "cache.field.expire" : "2m"
+      },
+      "analysis" : {
+         "analyzer": {
+            "lr_truncater": {
+               "type": "custom",
+               "tokenizer": "keyword",
+               "filter": ["lr_truncate"]
+            }
+         },
+         "filter": {
+            "lr_truncate": {
+               "type": "truncate",
+               "length": 32766
+            }
+         }
+      }
+    },
+    "mappings" : {
+       "meta" : {
+"_source" : {
+"excludes" : ["App", "AppEnd", "AppID", "AppIDEnd", "CaptureKey", "FileID" ]
+},
+"properties" : {
+"SrcIP"  : { "type": "ip", "ignore_malformed" : true },
+"SrcIP6"  : { "type": "string", "index" : "not_analyzed", "ignore_malformed" : true },
+"DestIP"  : { "type": "ip", "ignore_malformed" : true },
+"DestIP6"  : { "type": "string", "index" : "not_analyzed", "ignore_malformed" : true },
+"TimeStart" : { "type": "date", "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||yyyy-MM-dd'T'HH:mm:ss.SSSZZ"},
+"TimeUpdated" : { "type": "date", "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||yyyy-MM-dd'T'HH:mm:ss.SSSZZ"},
+"TimeTotal" : { "type": "long", "ignore_malformed" : true},
+"TimeEnd" : { "type": "long", "ignore_malformed" : true},
+"TimeStartRaw" : { "type": "long", "ignore_malformed" : true, "index" : "no", "store" : false },
+"TimeUpdatedRaw" : { "type": "long", "ignore_malformed" : true, "index" : "no", "store" : false },
+"TimeDelta" : { "type": "long", "ignore_malformed" : true },
+"Captured" : { "type": "string", "null_value": "false"},
+"Session" : {"type": "string", "index" : "not_analyzed"},
+"SrcMAC" : {"type" : "string", "index" : "not_analyzed", "ignore_malformed" : true},
+"ReceiverDomain" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"ReceiverAlias" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"ReceiverEmail" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"SenderDomain" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"SenderAlias" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"SenderEmail" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Subject" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"FileType" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Filename" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"AttachType" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"UserAgent" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Family" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Login" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Referer" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"URIFull" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Cookie" : {"type": "string", "analyzer": "lr_truncater", "fields": {"raw": {"type": "string", "analyzer": "lr_truncater"}}},
+"HeaderName" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"CommonName" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"ServerName" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"PcapFilename" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"ProtocolVersion" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"ApplicationFamily" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"ApplicationPath" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Domain_SLD_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Domain_FQDN_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Email" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"SessionID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"RequestSize" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"ContextID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Flags" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Mode" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"ContentLen" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"FileType" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"VidDataRate" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"FileSize" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"MsgID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"VidDuration" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"AcctOutputOctets" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"AcctInputOctets" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"CallDuration" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"FileChunkDataOffset" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Index" : { "type" : "string", "index" : "not_analyzed", "store" : true, "ignore_malformed" : true},
+"FileChunkLen" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"CallWay" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"StartTime" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"NASIP" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Channel" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"DeviceType" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"ContactUID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Offset" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Code" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Login" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Version" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"CallID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"UserID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"SqlStateCode" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"TTL" : { "type" : "long", "store" : true, "index": "not_analyzed", "ignore_malformed" : true },
+"StopTime" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"CommandCode" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"UID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"FramedIP" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"MsgType" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"EndStatus" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"TID" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"Timestamp" : { "type" : "string", "store" : true, "ignore_malformed" : true},
+"DestMAC" : {"type" : "string", "index" : "not_analyzed", "ignore_malformed" : true},
+"Method"  : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Query_2LD_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"SrcIP_GeoLookup_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"DstIP_GeoLookup_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"SrcIP_GeoRegion_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"DstIP_GeoRegion_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"SrcIP_Host_ID_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"DstIP_Host_ID_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"SrcPort_Type_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"DstPort_Type_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Src_VLAN_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Dst_VLAN_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Code_Lookup_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Code_Family_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Method_Lookup_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}},
+"Public_DNS_Name_NM" : {"type": "string", "fields": {"raw": {"type": "string", "index": "not_analyzed"}}}
+}
+}
+    }
+   }
+}
