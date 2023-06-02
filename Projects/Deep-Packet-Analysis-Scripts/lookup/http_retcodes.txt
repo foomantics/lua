@@ -1,0 +1,507 @@
+### Author(s): Jim Lee
+### Last Updated: 02/12/19
+### File Description: Lookup file for returning a
+### description of a return code from a HTTP flow.
+
+
+
+100_Continue
+101_Switching Protocols
+102_Processing
+103_Early Hints
+104_Unassigned
+105_Unassigned
+106_Unassigned
+107_Unassigned
+108_Unassigned
+109_Unassigned
+110_Unassigned
+111_Unassigned
+112_Unassigned
+113_Unassigned
+114_Unassigned
+115_Unassigned
+116_Unassigned
+117_Unassigned
+118_Unassigned
+119_Unassigned
+120_Unassigned
+121_Unassigned
+122_Unassigned
+123_Unassigned
+124_Unassigned
+125_Unassigned
+126_Unassigned
+127_Unassigned
+128_Unassigned
+129_Unassigned
+130_Unassigned
+131_Unassigned
+132_Unassigned
+133_Unassigned
+134_Unassigned
+135_Unassigned
+136_Unassigned
+137_Unassigned
+138_Unassigned
+139_Unassigned
+140_Unassigned
+141_Unassigned
+142_Unassigned
+143_Unassigned
+144_Unassigned
+145_Unassigned
+146_Unassigned
+147_Unassigned
+148_Unassigned
+149_Unassigned
+150_Unassigned
+151_Unassigned
+152_Unassigned
+153_Unassigned
+154_Unassigned
+155_Unassigned
+156_Unassigned
+157_Unassigned
+158_Unassigned
+159_Unassigned
+160_Unassigned
+161_Unassigned
+162_Unassigned
+163_Unassigned
+164_Unassigned
+165_Unassigned
+166_Unassigned
+167_Unassigned
+168_Unassigned
+169_Unassigned
+170_Unassigned
+171_Unassigned
+172_Unassigned
+173_Unassigned
+174_Unassigned
+175_Unassigned
+176_Unassigned
+177_Unassigned
+178_Unassigned
+179_Unassigned
+180_Unassigned
+181_Unassigned
+182_Unassigned
+183_Unassigned
+184_Unassigned
+185_Unassigned
+186_Unassigned
+187_Unassigned
+188_Unassigned
+189_Unassigned
+190_Unassigned
+191_Unassigned
+192_Unassigned
+193_Unassigned
+194_Unassigned
+195_Unassigned
+196_Unassigned
+197_Unassigned
+198_Unassigned
+199_Unassigned
+200_OK
+201_Created
+202_Accepted
+203_Non-Authoritative Information
+204_No Content
+205_Reset Content
+206_Partial Content
+207_Multi-Status
+208_Already Reported
+209_Unassigned
+210_Unassigned
+211_Unassigned
+212_Unassigned
+213_Unassigned
+214_Unassigned
+215_Unassigned
+216_Unassigned
+217_Unassigned
+218_Unassigned
+219_Unassigned
+220_Unassigned
+221_Unassigned
+222_Unassigned
+223_Unassigned
+224_Unassigned
+225_Unassigned
+226_IM Used
+227_Unassigned
+228_Unassigned
+229_Unassigned
+230_Unassigned
+231_Unassigned
+232_Unassigned
+233_Unassigned
+234_Unassigned
+235_Unassigned
+236_Unassigned
+237_Unassigned
+238_Unassigned
+239_Unassigned
+240_Unassigned
+241_Unassigned
+242_Unassigned
+243_Unassigned
+244_Unassigned
+245_Unassigned
+246_Unassigned
+247_Unassigned
+248_Unassigned
+249_Unassigned
+250_Unassigned
+251_Unassigned
+252_Unassigned
+253_Unassigned
+254_Unassigned
+255_Unassigned
+256_Unassigned
+257_Unassigned
+258_Unassigned
+259_Unassigned
+260_Unassigned
+261_Unassigned
+262_Unassigned
+263_Unassigned
+264_Unassigned
+265_Unassigned
+266_Unassigned
+267_Unassigned
+268_Unassigned
+269_Unassigned
+270_Unassigned
+271_Unassigned
+272_Unassigned
+273_Unassigned
+274_Unassigned
+275_Unassigned
+276_Unassigned
+277_Unassigned
+278_Unassigned
+279_Unassigned
+280_Unassigned
+281_Unassigned
+282_Unassigned
+283_Unassigned
+284_Unassigned
+285_Unassigned
+286_Unassigned
+287_Unassigned
+288_Unassigned
+289_Unassigned
+290_Unassigned
+291_Unassigned
+292_Unassigned
+293_Unassigned
+294_Unassigned
+295_Unassigned
+296_Unassigned
+297_Unassigned
+298_Unassigned
+299_Unassigned
+300_Multiple Choices
+301_Moved Permanently
+302_Found
+303_See Other
+304_Not Modified
+305_Use Proxy
+306_(Unused)
+307_Temporary Redirect
+308_Permanent Redirect
+309_Unassigned
+310_Unassigned
+311_Unassigned
+312_Unassigned
+313_Unassigned
+314_Unassigned
+315_Unassigned
+316_Unassigned
+317_Unassigned
+318_Unassigned
+319_Unassigned
+320_Unassigned
+321_Unassigned
+322_Unassigned
+323_Unassigned
+324_Unassigned
+325_Unassigned
+326_Unassigned
+327_Unassigned
+328_Unassigned
+329_Unassigned
+330_Unassigned
+331_Unassigned
+332_Unassigned
+333_Unassigned
+334_Unassigned
+335_Unassigned
+336_Unassigned
+337_Unassigned
+338_Unassigned
+339_Unassigned
+340_Unassigned
+341_Unassigned
+342_Unassigned
+343_Unassigned
+344_Unassigned
+345_Unassigned
+346_Unassigned
+347_Unassigned
+348_Unassigned
+349_Unassigned
+350_Unassigned
+351_Unassigned
+352_Unassigned
+353_Unassigned
+354_Unassigned
+355_Unassigned
+356_Unassigned
+357_Unassigned
+358_Unassigned
+359_Unassigned
+360_Unassigned
+361_Unassigned
+362_Unassigned
+363_Unassigned
+364_Unassigned
+365_Unassigned
+366_Unassigned
+367_Unassigned
+368_Unassigned
+369_Unassigned
+370_Unassigned
+371_Unassigned
+372_Unassigned
+373_Unassigned
+374_Unassigned
+375_Unassigned
+376_Unassigned
+377_Unassigned
+378_Unassigned
+379_Unassigned
+380_Unassigned
+381_Unassigned
+382_Unassigned
+383_Unassigned
+384_Unassigned
+385_Unassigned
+386_Unassigned
+387_Unassigned
+388_Unassigned
+389_Unassigned
+390_Unassigned
+391_Unassigned
+392_Unassigned
+393_Unassigned
+394_Unassigned
+395_Unassigned
+396_Unassigned
+397_Unassigned
+398_Unassigned
+399_Unassigned
+400_Bad Request
+401_Unauthorized
+402_Payment Required
+403_Forbidden
+404_Not Found
+405_Method Not Allowed
+406_Not Acceptable
+407_Proxy Authentication Required
+408_Request Timeout
+409_Conflict
+410_Gone
+411_Length Required
+412_Precondition Failed
+413_Payload Too Large
+414_URI Too Long
+415_Unsupported Media Type
+416_Range Not Satisfiable
+417_Expectation Failed
+418_Unassigned
+419_Unassigned
+420_Unassigned
+421_Misdirected Request
+422_Unprocessable Entity
+423_Locked
+424_Failed Dependency
+425_Too Early
+426_Upgrade Required
+427_Unassigned
+428_Precondition Required
+429_Too Many Requests
+430_Unassigned
+431_Request Header Fields Too Large
+432_Unassigned
+433_Unassigned
+434_Unassigned
+435_Unassigned
+436_Unassigned
+437_Unassigned
+438_Unassigned
+439_Unassigned
+440_Unassigned
+441_Unassigned
+442_Unassigned
+443_Unassigned
+444_Unassigned
+445_Unassigned
+446_Unassigned
+447_Unassigned
+448_Unassigned
+449_Unassigned
+450_Unassigned
+451_Unavailable For Legal Reasons
+452_Unassigned
+453_Unassigned
+454_Unassigned
+455_Unassigned
+456_Unassigned
+457_Unassigned
+458_Unassigned
+459_Unassigned
+460_Unassigned
+461_Unassigned
+462_Unassigned
+463_Unassigned
+464_Unassigned
+465_Unassigned
+466_Unassigned
+467_Unassigned
+468_Unassigned
+469_Unassigned
+470_Unassigned
+471_Unassigned
+472_Unassigned
+473_Unassigned
+474_Unassigned
+475_Unassigned
+476_Unassigned
+477_Unassigned
+478_Unassigned
+479_Unassigned
+480_Unassigned
+481_Unassigned
+482_Unassigned
+483_Unassigned
+484_Unassigned
+485_Unassigned
+486_Unassigned
+487_Unassigned
+488_Unassigned
+489_Unassigned
+490_Unassigned
+491_Unassigned
+492_Unassigned
+493_Unassigned
+494_Unassigned
+495_Unassigned
+496_Unassigned
+497_Unassigned
+498_Unassigned
+499_Unassigned
+500_Internal Server Error
+501_Not Implemented
+502_Bad Gateway
+503_Service Unavailable
+504_Gateway Timeout
+505_HTTP Version Not Supported
+506_Variant Also Negotiates
+507_Insufficient Storage
+508_Loop Detected
+509_Unassigned
+510_Not Extended
+511_Network Authentication Required
+512_Unassigned
+513_Unassigned
+514_Unassigned
+515_Unassigned
+516_Unassigned
+517_Unassigned
+518_Unassigned
+519_Unassigned
+520_Unassigned
+521_Unassigned
+522_Unassigned
+523_Unassigned
+524_Unassigned
+525_Unassigned
+526_Unassigned
+527_Unassigned
+528_Unassigned
+529_Unassigned
+530_Unassigned
+531_Unassigned
+532_Unassigned
+533_Unassigned
+534_Unassigned
+535_Unassigned
+536_Unassigned
+537_Unassigned
+538_Unassigned
+539_Unassigned
+540_Unassigned
+541_Unassigned
+542_Unassigned
+543_Unassigned
+544_Unassigned
+545_Unassigned
+546_Unassigned
+547_Unassigned
+548_Unassigned
+549_Unassigned
+550_Unassigned
+551_Unassigned
+552_Unassigned
+553_Unassigned
+554_Unassigned
+555_Unassigned
+556_Unassigned
+557_Unassigned
+558_Unassigned
+559_Unassigned
+560_Unassigned
+561_Unassigned
+562_Unassigned
+563_Unassigned
+564_Unassigned
+565_Unassigned
+566_Unassigned
+567_Unassigned
+568_Unassigned
+569_Unassigned
+570_Unassigned
+571_Unassigned
+572_Unassigned
+573_Unassigned
+574_Unassigned
+575_Unassigned
+576_Unassigned
+577_Unassigned
+578_Unassigned
+579_Unassigned
+580_Unassigned
+581_Unassigned
+582_Unassigned
+583_Unassigned
+584_Unassigned
+585_Unassigned
+586_Unassigned
+587_Unassigned
+588_Unassigned
+589_Unassigned
+590_Unassigned
+591_Unassigned
+592_Unassigned
+593_Unassigned
+594_Unassigned
+595_Unassigned
+596_Unassigned
+597_Unassigned
+598_Unassigned
+599_Unassigned

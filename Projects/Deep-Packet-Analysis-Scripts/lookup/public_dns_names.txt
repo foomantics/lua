@@ -1,0 +1,71 @@
+### Author(s): Jim Lee
+### Last Updated: 04/04/19
+### File Description: Lookup file for returning organization names
+### for IP addresses of public DNS servers from a DNS flow.
+
+
+
+1.2.4.8_CNNIC SDNS
+1.0.0.1_Cloudflare
+1.1.1.1_Cloudflare
+8.20.247.20_Comodo Secure DNS
+8.26.56.26_Comodo Secure DNS
+8.8.4.4_Google
+8.8.8.8_Google
+9.9.9.9_Quad9
+23.253.163.53_Alternate DNS
+37.235.1.177_FreeDNS
+45.33.97.5_FreeDNS
+45.77.165.194_Fourth Estate
+64.6.64.6_Verisign
+64.6.65.6_Verisign
+74.82.42.42_Hurricane Electric
+77.88.8.1_Yandex.DNS
+77.88.8.8_Yandex.DNS
+80.80.80.80_Freenom World
+80.80.81.81_Freenom World
+81.218.119.11_GreenTeamDNS
+84.200.69.80_DNS.WATCH
+84.200.70.40_DNS.WATCH
+89.233.43.71_UncensoredDNS
+91.239.100.100_UncensoredDNS
+99.192.182.100_Tenta
+99.192.182.101_Tenta
+101.226.4.6_DNSpai
+109.69.8.51_puntCAT
+114.114.114.114_114DNS
+114.114.115.115_114DNS
+117.50.11.11_OneDNS
+117.50.22.22_OneDNS
+119.28.28.28_DNSPod Public DNS+
+119.29.29.29_DNSPod Public DNS+
+149.112.112.112_Quad9
+156.154.70.1_Neustar
+156.154.71.1_Neustar
+172.98.193.42_OpenNIC
+176.103.130.130_AdGuard DNS
+176.103.130.131_AdGuard DNS
+180.76.76.76_Baidu Public DNS
+185.228.168.9_CleanBrowsing
+185.228.169.9_CleanBrowsing
+195.46.39.39_SafeDNS
+195.46.39.40_SafeDNS
+198.101.242.72_Alternate DNS
+198.206.14.241_OpenNIC
+208.67.220.220_OpenDNS
+208.67.222.222_OpenDNS
+208.76.50.50_SmartViper
+208.76.51.51_SmartViper
+209.88.198.133_GreenTeamDNS
+209.244.0.3_CenturyLink
+209.244.0.4_CenturyLink
+210.2.4.8_CNNIC SDNS
+216.146.35.35_Dyn
+216.146.36.36_Dyn
+218.30.118.6_DNSpai
+223.5.5.5_AliDNS
+223.6.6.6_AliDNS
+
+# Depracated Public DNS Servers
+199.85.126.10_Norton ConnectSafe
+199.85.127.10_Norton ConnectSafe
